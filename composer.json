@@ -1,0 +1,32 @@
+{
+    "name": "marcopollacci/tipsandtrick",
+    "type": "library",
+    "description": "Simple library with many tips and tricks for ZE Expressive",
+    "keywords": ["ze", "zend", "zend-expressive", "php", "marcopollacci"],
+    "homepage": "https://www.marcopollacci.it",
+    "license": "MIT",
+    "authors": [
+        {"name": "Marco Pollacci", "email": "marco@pollacci.net"}
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": { "MarcoPollacci\\Tipsandtrick\\": "src/" }
+    },
+    "autoload-dev": {
+    },
+    "extra": {
+        "zf": {
+            "component": "MarcoPollacci\\Tipsandtrick",
+            "config-provider": "MarcoPollacci\\Tipsandtrick\\ConfigProvider"
+        }
+    },
+     "repositories": [
+     ],
+     "archive": {
+        "exclude": ["!.git", "!/.git"]
+    }
+}
