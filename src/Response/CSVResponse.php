@@ -11,7 +11,7 @@ use Zend\Diactoros\Stream;
 class CSVResponse extends Response
 {
 
-    public function __construct($file, $nameFile)
+    public function __construct($file, string $nameFile)
     {
       $headers = [
                     'Content-Type' => 'text/csv; charset=utf-8',
