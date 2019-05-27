@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 namespace MarcoPollacci\Tipsandtrick;
-use Zend\ServiceManager\Factory\InvokableFactory;
+
 /**
  * The configuration provider for the MarcoPollacci Tipsandtrick module
  *
@@ -34,6 +34,7 @@ class ConfigProvider
             'invokables' => [
             ],
             'factories'  => [
+                Middleware\RouterRequestMiddleware::class => Middleware\RouterRequestMiddlewareFactory::class,
             ],
         ];
     }
@@ -45,6 +46,7 @@ class ConfigProvider
     {
         return [
             'paths' => [
+                'tipsTricks' => [__DIR__ . '/templates/tipstricks/'],
             ],
         ];
     }

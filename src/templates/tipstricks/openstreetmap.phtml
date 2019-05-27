@@ -1,0 +1,35 @@
+<?php
+$this->headLink()
+    ->prependStylesheet('https://unpkg.com/leaflet@1.3.4/dist/leaflet.css');
+$this->inlineScript()
+    ->prependFile('https://unpkg.com/leaflet@1.3.4/dist/leaflet.js');
+?>
+
+<?php
+  $emit = "
+  $(window).bind('load', function() {
+  var map = L.map('map_openstreetmap', {
+          zoom: 10
+      });
+
+  var osmUrl= 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+  var osmAttrib= 'Map data © OpenstreetMap contributors';
+  var osm = new L.TileLayer(osmUrl, {attribution: osmAttrib});
+
+  map.addLayer(osm);
+  var fit = [];
+  ";
+
+  foreach ($markers as $keymarker => $valuemarker) {
+    $emit .= "var marker = L.marker([".$valuemarker['LATITUDE'].", ".$valuemarker['LONGITUDE']."]).bindPopup('".$valuemarker['TEXT']."');
+              marker.addTo(map);
+              fit.push([".$valuemarker['LATITUDE'].", ".$valuemarker['LONGITUE']."]);";
+  }
+
+  $emit .= " map.fitBounds(fit);
+  });";
+
+  $this->inlineScript()->captureStart();
+
+    echo $emit;
+  $this->inlineScript()->captureEnd();
