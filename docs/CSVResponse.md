@@ -29,7 +29,7 @@ class MyBeautifulMiddleware implements MiddlewareInterface
 
       fclose($fp);
 
-      return new CSVResponse($fp, 'mywonderfulfile');
+      return new CSVResponse('path-to-my-file.csv', 'mywonderfulfile');
 
 }
 ```
