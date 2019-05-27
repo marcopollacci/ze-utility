@@ -12,5 +12,7 @@ composer require marcopollacci/tipsandtrick
 ```
 
 
-## How Tips:
-v.1.0 = Add CSVREsponse
+## List of Tips:
+- CSVResponse
+- phtml view of openstreetmap
+- RouterInterface in middleware
