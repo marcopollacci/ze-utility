@@ -1,0 +1,6 @@
+language: php
+php:
+  - "7.2"
+sudo: false
+script:
+  - find src/ -name \*.php -exec php -l "{}" \; && find config/ -name \*.php -exec php -l "{}" \;
