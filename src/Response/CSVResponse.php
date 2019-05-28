@@ -18,11 +18,11 @@ class CSVResponse extends Response
                     'Content-Disposition' => 'attachment;filename="'. $nameFile .'"'
                  ];
 
-        $body = new Stream($file, 'r');
+       $body = new Stream($file, 'r'); 
 
-        @unlink($file);
+       @unlink($file);
 
-        parent::__construct($body, 200, $headers);
+       parent::__construct($body, 200, $headers);
     }
 
 }

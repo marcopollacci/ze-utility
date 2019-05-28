@@ -14,5 +14,6 @@ composer require marcopollacci/tipsandtrick
 
 ## List of Tips:
 - CSVResponse
+- ExcelResponse
 - phtml view of openstreetmap
 - RouterInterface in middleware
