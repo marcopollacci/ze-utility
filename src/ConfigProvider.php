@@ -46,7 +46,7 @@ class ConfigProvider
     {
         return [
             'paths' => [
-                'tipsTricks' => [__DIR__ . '/templates/tipstricks/'],
+                'tipstricks' => [__DIR__ . '/templates/tipstricks/'],
             ],
         ];
     }
