@@ -4,6 +4,6 @@ php:
 sudo: false
 script:
   - mkdir checksintax && cp -r ./src/. ./checksintax &&
-    cd ./checksintax &&
+    cd ./checksintax &&  touch composer.json &&
     composer require nunomaduro/phpinsights --dev &&
     ./vendor/bin/phpinsights --no-interaction --min-quality=80 --min-complexity=80 --min-architecture=80 --min-style=60;
