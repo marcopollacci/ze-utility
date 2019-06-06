@@ -1,6 +1,9 @@
 language: php
 php:
-  - "7.2"
+  - "edbizarro/gitlab-ci-pipeline-php:7.2"
 sudo: false
 script:
-  - find src/ -name \*.php -exec php -l "{}" \;
+  - mkdir checksintax && cp -r ./src/. ./checksintax &&
+    cd ./checksintax &&
+    composer require nunomaduro/phpinsights --dev &&
+    ./vendor/bin/phpinsights --no-interaction --min-quality=80 --min-complexity=80 --min-architecture=80 --min-style=60;
