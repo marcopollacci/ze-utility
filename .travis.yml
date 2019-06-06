@@ -1,6 +1,6 @@
 language: php
 php:
-  - "edbizarro/gitlab-ci-pipeline-php:7.2"
+  - "7.2"
 sudo: false
 script:
   - mkdir checksintax && cp -r ./src/. ./checksintax &&
