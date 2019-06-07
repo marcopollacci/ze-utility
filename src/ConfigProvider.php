@@ -35,6 +35,7 @@ class ConfigProvider
             ],
             'factories'  => [
                 Middleware\RouterRequestMiddleware::class => Middleware\RouterRequestMiddlewareFactory::class,
+                Middleware\AnalyticsMiddleware::class => Middleware\AnalyticsMiddlewareFactory::class
             ],
         ];
     }

@@ -17,3 +17,4 @@ composer require marcopollacci/tipsandtrick
 - ExcelResponse
 - phtml view of openstreetmap
 - RouterInterface in middleware
+- AnalyticsMiddleware for Google Analytics
